@@ -1,13 +1,6 @@
 import React from 'react';
 
-function Nav(props) {
-  const {
-    categories = [],
-    setCurrentCategory,
-    contactSelected,
-    currentCategory,
-    setContactSelected,
-  } = props;
+function Nav() {
 
   return (
     <header className="flex-row px-1">
@@ -19,30 +12,25 @@ function Nav(props) {
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+            <a data-testid="about" href="#about">
               About me
             </a>
           </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+          <li>
+            <a data-testid="portfolio" href="#portfolio">
+                Portfolio
+            </a>
           </li>
-          {categories.map((category) => (
-            <li
-              className={`mx-1 ${
-                currentCategory.name === category.name && !contactSelected && 'navActive'
-                }`}
-              key={category.name}
-            >
-              <span
-                onClick={() => {
-                  setCurrentCategory(category);
-                  setContactSelected(false);
-                }}
-              >
-                
-              </span>
-            </li>
-          ))}
+          <li>
+            <a data-testid="resume" href="#resume">
+                Resume
+            </a>
+          </li>
+          <li>
+            <a data-testid="contact" href="#contact">
+                Contact
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
