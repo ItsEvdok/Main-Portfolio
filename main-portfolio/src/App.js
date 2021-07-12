@@ -4,6 +4,7 @@ import About from './components/About';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [categories] = useState([
@@ -28,8 +29,7 @@ function App() {
         {!contactSelected ? (
           <>
             <About></About>
-            <Resume></Resume>
-            <Portfolio></Portfolio>
+            <Footer></Footer>
           </>
         ) : (
           <Contact></Contact>
