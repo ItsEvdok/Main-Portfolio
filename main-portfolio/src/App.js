@@ -1,40 +1,37 @@
 import React, { useState } from 'react';
-import Nav from './components/Nav';
+import MyNav from './components/Nav';
 import About from './components/About';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [categories] = useState([
-    { name: 'portfolio' },
-    { name: 'resume' },
+  const [navTabs] = useState([
+    { name: 'About' },
+    { name: 'Projects' },
+    { name: 'Contact' },
+    { name: 'Resume' },
   ]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
-  const [contactSelected, setContactSelected] = useState(false);
+  const [currentTab, setCurrentTab] = useState(navTabs[0]);
 
   return (
     <div>
-      <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      ></Nav>
+      <MyNav
+        navTabs={navTabs}
+        setCurrentTab={setCurrentTab}
+        currentTab={currentTab}
+      ></MyNav>
       <main>
-        {!contactSelected ? (
-          <>
-            <About></About>
-            <Footer></Footer>
-          </>
-        ) : (
-          <Contact></Contact>
-        )}
+        {!currentTab ? <About></About> : 
+          currentTab.name === 'Projects' ? <Portfolio></Portfolio> :
+          currentTab.name === 'Resume' ? <Resume></Resume> :
+          currentTab.name === 'Contact' ? <Contact></Contact> : <About></About>
+        }
       </main>
+      <Footer></Footer>
     </div>
   );
 }

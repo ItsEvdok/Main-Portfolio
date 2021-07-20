@@ -1,53 +1,44 @@
 import React from 'react';
-import { capitalizeFirstLetter } from '../utils/helpers';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
 
-function Nav(props) {
+export default function MyNav(props)  {
   const {
-    categories = [],
-    setCurrentCategory,
-    contactSelected,
-    currentCategory,
-    setContactSelected,
+    navTabs = [],
+    setCurrentTab,
+    currentTab
   } = props;
 
-  return (
-    <header className="flex-row px-1">
-      <h2>
-        <a data-testid="link" href="/">
-            ItsEvdok
-        </a>
-      </h2>
-      <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
-              About me
-            </a>
-          </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
-          </li>
-          {categories.map((category) => (
-            <li
-              className={`mx-1 ${
-                currentCategory.name === category.name && !contactSelected && 'navActive'
-                }`}
-              key={category.name}
-            >
-              <span
-                onClick={() => {
-                  setCurrentCategory(category);
-                  setContactSelected(false);
-                }}
-              >
-                {capitalizeFirstLetter(category.name)}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
-  );
-}
+  const changeButtonColor = (e, remove) => {
+    const linkStyle = 'background-color: rgba(31, 121, 212, 0.767); border-radius: 5px;)';
+    const target = e.target;
+    remove ? target.matches('span') ?
+        target.parentElement.style = '' :
+        target.style = '' :
+        target === 'span' ? target.parentElement.style = linkStyle :
+            target.style = linkStyle
+  }
 
-export default Nav;
+  return (
+    <Container fluid className='navBar' class="mb-3 bg-dark text-white">
+      <Navbar className={'d-flex flex-wrap justify-content-between p-3'}>
+        <div className='d-flex flex-wrap justify-content-center'>
+          <Navbar.Brand href="/" ><h1 class='ms-3 text-white'>ItsEvdok</h1> </Navbar.Brand>
+        </div>
+        <Nav className='d-flex flex-wrap justify-content-center'>
+          {navTabs.map((tabs) => (
+            <Nav.Link
+              onPointerOver={(e) => { changeButtonColor(e) }}
+              onPointerOut={(e) => { changeButtonColor(e, true) }}
+              href={`#${tabs.name}`}
+              key={tabs.name}
+              className={`navLink text-white ${currentTab.name === tabs.name && 'navActive pulse'}`}
+              onClick={() => { setCurrentTab(tabs) }}
+            >{tabs.name}</Nav.Link>
+          ))}
+        </Nav>
+      </Navbar>
+    </Container>
+  )
+}
