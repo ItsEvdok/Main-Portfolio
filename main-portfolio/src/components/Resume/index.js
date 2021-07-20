@@ -1,11 +1,9 @@
 import React from 'react';
 
-function Resume() {
+export default function Resume() {
     return (
-        <section>
-            <h2> Resume </h2>
+        <section class="text-center">
+            <h2 class="m-4"> Resume </h2>
         </section>
     );
-}
-
-export default Resume;
+};

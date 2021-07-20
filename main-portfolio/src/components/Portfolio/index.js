@@ -1,11 +1,9 @@
 import React from 'react';
 
-function Portfolio() {
+export default function Portfolio() {
     return (
-        <section>
-            <h2> Projects </h2>
+        <section class="text-center">
+            <h2 class="m-4"> Projects </h2>
         </section>
     )
-}
-
-export default Portfolio;
+};
