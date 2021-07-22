@@ -1,13 +1,15 @@
 const projects = [
     {
         name: 'StayBuzzin',
-        repo: '',
-        url: '',
+        description: 'Something will go here',
+        repo: 'https://github.com/Landonwilson1/StayBuzzin.net',
+        url: 'https://staybuzzin.herokuapp.com/',
     },
     {
-        name: 'StayBuzzin',
-        repo: '',
-        url: '',
+        name: 'VocabQuiz',
+        description: 'Something will go here',
+        repo: 'https://github.com/Natallie01/vocab-quiz',
+        url: 'https://natallie01.github.io/vocab-quiz/',
     }
 ];
 
