@@ -59,7 +59,7 @@ export default function Contact() {
   return (
     <section className='col-12 d-flex flex-wrap justify-content-center mt-5'>
 
-      <Form className='col-11 col-sm-11 col-md-6 col-lg-5 col-xl-4 bg-dark contactForm p-5 boxShadow'>
+      <Form className='col-11 col-sm-11 col-md-6 col-lg-5 col-xl-4 bg-dark rounded-3 contactForm p-5 boxShadow'>
         <h1 className='text-white textShadow'>Let's get in touch!</h1>
 
         <Form.Group controlId="nameControl">
@@ -104,7 +104,7 @@ export default function Contact() {
         )}
         <div className='col-12 d-flex flex-wrap justify-content-end m-1 p-2'>
           <button type='submit'
-            className='blue p-3 m-1 text-white textShadow boxShadow submit'
+            className='blue p-2 m-1 textShadow boxShadow btn btn-secondary btn-lg submit'
             onSubmit={(e) => handleSubmit(e)}
             onClick={(e) => handleSubmit(e)}
           >
