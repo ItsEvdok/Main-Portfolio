@@ -2,15 +2,16 @@ import React from "react";
 import projects from "./projects";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Footer from '../Footer';
 
 export default function Portfolio() {
   return (
     <section>
       <h2 class="m-4 text-center"> Projects </h2>
       <div className="d-flex flex-wrap flex-row justify-content-center">
-        <div class="d-flex flex-wrap justify-space-around">
+        <div class="d-flex flex-wrap justify-space-between">
         {projects.map((project) => (
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "17rem" }}>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title>{project.name}</Card.Title>
@@ -26,6 +27,7 @@ export default function Portfolio() {
         ))}
         </div>
       </div>
+      <Footer></Footer>
     </section>
   );
 }

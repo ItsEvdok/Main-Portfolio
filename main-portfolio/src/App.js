@@ -4,7 +4,6 @@ import About from './components/About';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
           currentTab.name === 'Contact' ? <Contact></Contact> : <About></About>
         }
       </main>
-      <Footer></Footer>
     </div>
   );
 }
