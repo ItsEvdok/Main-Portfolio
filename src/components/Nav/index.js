@@ -20,8 +20,12 @@ export default function MyNav(props)  {
             target.style = linkStyle
   }
 
+  // const navStyle = {
+  //   color: 'rgb(73, 81, 111)'
+  // };
+
   return (
-    <Container fluid className='navBar' class="mb-3 bg-dark text-white">
+    <Container fluid className='navBar bg-dark'>
       <Navbar className={'d-flex flex-wrap justify-content-between p-3'}>
         <div className='d-flex flex-wrap justify-content-center'>
           <Navbar.Brand href="/" ><h1 class='ms-3 text-white'>ItsEvdok</h1> </Navbar.Brand>

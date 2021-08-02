@@ -5,11 +5,13 @@ export default function About() {
 
   return (
     <section class="text-center">
-      <h2 id="about" href="#about" class="m-4">About Me</h2>
+      <h2 id="about" href="#about" class="m-4">Hello! I'm Semion.</h2>
       <div class="lh-lg mx-5">
+        <p> Born in 1999 in Kazan, Russia. Chasing dreams in Florida since 2009.</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum. Aenean sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi tristique justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh. Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
+          I'm a Full Stack Web Developer with proven proficiency in both front-end and back-end development. Have a passion for problem solving, nothing like getting them weird bug figured out!
         </p>
+        <p> I enjoy taking hikes on mountains, going sightseeing, and skydiving. Video games are my favorite free time activity at le casa.</p>
       </div>
       <Footer></Footer>
     </section>

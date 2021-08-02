@@ -18,18 +18,21 @@ function App() {
 
   return (
     <div>
-      <MyNav
-        navTabs={navTabs}
-        setCurrentTab={setCurrentTab}
-        currentTab={currentTab}
-      ></MyNav>
-      <main>
-        {!currentTab ? <About></About> : 
-          currentTab.name === 'Projects' ? <Portfolio></Portfolio> :
-          currentTab.name === 'Resume' ? <Resume></Resume> :
-          currentTab.name === 'Contact' ? <Contact></Contact> : <About></About>
-        }
-      </main>
+      <div className='container-fluid p-0 m-0'>
+        <MyNav
+          navTabs={navTabs}
+          setCurrentTab={setCurrentTab}
+          currentTab={currentTab}
+          className='lightGray'
+        ></MyNav>
+        <main>
+          {!currentTab ? <About></About> :
+            currentTab.name === 'Projects' ? <Portfolio></Portfolio> :
+              currentTab.name === 'Resume' ? <Resume></Resume> :
+                currentTab.name === 'Contact' ? <Contact></Contact> : <About></About>
+          }
+        </main>
+      </div>
     </div>
   );
 }
