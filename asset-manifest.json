@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Main-Portfolio/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/Main-Portfolio/static/js/main.e6114ad1.chunk.js",
-    "main.js.map": "/Main-Portfolio/static/js/main.e6114ad1.chunk.js.map",
+    "main.js": "/Main-Portfolio/static/js/main.e3c87e21.chunk.js",
+    "main.js.map": "/Main-Portfolio/static/js/main.e3c87e21.chunk.js.map",
     "runtime-main.js": "/Main-Portfolio/static/js/runtime-main.f88887f0.js",
     "runtime-main.js.map": "/Main-Portfolio/static/js/runtime-main.f88887f0.js.map",
     "static/css/2.4be38407.chunk.css": "/Main-Portfolio/static/css/2.4be38407.chunk.css",
@@ -13,13 +13,19 @@
     "index.html": "/Main-Portfolio/index.html",
     "static/css/2.4be38407.chunk.css.map": "/Main-Portfolio/static/css/2.4be38407.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/Main-Portfolio/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.b90b4df6.chunk.js.LICENSE.txt": "/Main-Portfolio/static/js/2.b90b4df6.chunk.js.LICENSE.txt"
+    "static/js/2.b90b4df6.chunk.js.LICENSE.txt": "/Main-Portfolio/static/js/2.b90b4df6.chunk.js.LICENSE.txt",
+    "static/media/Notetaker.4e65e2be.png": "/Main-Portfolio/static/media/Notetaker.4e65e2be.png",
+    "static/media/Proximo.e1769a80.png": "/Main-Portfolio/static/media/Proximo.e1769a80.png",
+    "static/media/StayBuzzin.c7eb8553.png": "/Main-Portfolio/static/media/StayBuzzin.c7eb8553.png",
+    "static/media/TechBlog.db6658d4.png": "/Main-Portfolio/static/media/TechBlog.db6658d4.png",
+    "static/media/Vocab.3861ff2c.png": "/Main-Portfolio/static/media/Vocab.3861ff2c.png",
+    "static/media/Weather.22064a19.png": "/Main-Portfolio/static/media/Weather.22064a19.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f88887f0.js",
     "static/css/2.4be38407.chunk.css",
     "static/js/2.b90b4df6.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.e6114ad1.chunk.js"
+    "static/js/main.e3c87e21.chunk.js"
   ]
 }
